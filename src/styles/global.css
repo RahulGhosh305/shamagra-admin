@@ -1,0 +1,232 @@
+.ant-form-item { margin-bottom: 7px !important; }
+#myForm .ant-input { padding: 7px 11px !important; }
+.my-form .ant-input { padding: 7px 11px !important; }
+.login-form .ant-input { padding: 12px 11px !important; }
+#myForm .ant-input-number-input { padding: 7px 11px !important; height: unset !important; }
+.my-form .ant-input-number-input { padding: 7px 11px !important; height: unset !important; }
+.hidden { display: none !important; }
+.ant-card {border-radius: 10px !important;}
+.ant-tabs-tab.ant-tabs-tab-active .ant-tabs-tab-btn,
+.ant-descriptions-item-content a[target="_blank"]{
+    color: rgba(0, 0, 0, 0.85) !important;
+    font-weight: 500 !important;
+}
+.striking-logo img {
+    max-height: 25px !important;
+    width: unset !important;
+    max-width: unset !important;
+}
+.ant-popover { z-index: unset !important; }
+.table-responsive .ant-table-content .ant-table-cell { white-space: unset !important; }
+.ant-card-body { padding: 15px !important; }
+.ant-pagination { margin: 0 !important; }
+.ant-table-pagination { padding-top: 15px !important; }
+/* .anticon { vertical-align: unset !important; } */
+.ant-table-thead > tr > th, .ant-table-tbody > tr > td, .ant-table tfoot > tr > th, .ant-table tfoot > tr > td { padding: 8px 16px !important; }
+.ant-page-header {
+    padding: 20px !important;
+    border-radius: 10px !important;
+    /*margin-top: 30px !important;*/
+}
+.login-form {
+    margin-top: 10% !important;
+    padding: 20px !important;
+    background-color: #fff !important;
+    border-radius: 10px !important;
+}
+.pl-5 { padding-left: 5px; }
+.pr-5 { padding-right: 5px; }
+.pt-5 { padding-top: 5px; }
+.pb-5 { padding-bottom: 5px; }
+.mb-20 { margin-bottom: 20px; }
+.mt-20 { margin-top: 20px; }
+.mt-50 { margin-top: 50px; }
+.mb-50 { margin-bottom: 50px; }
+.ant-btn-sm {
+    height: 24px;
+    padding: 0 7px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.ant-descriptions {
+    margin-bottom: 15px;
+}
+.minimum-mt {
+    margin-top: 5px;
+}
+.border-radius-3 {
+    border-radius: 3px;
+}
+.no-padding {
+    padding: 0 !important;
+}
+.no-margin {
+    margin: 0 !important;
+}
+.pointer {
+    cursor: pointer;
+}
+.minimum-ml { margin-left: 5px; }
+.minimum-mr { margin-right: 5px; }
+.border-warning { border-color: #fa8b0c; }
+.border-danger { border-color: #ff4d4f; }
+.border-success { border-color: #20c997; }
+.border-primary { border-color: #fa5d0d; }
+.border-info { border-color: #2c99ff; }
+.text-editor {
+    border-radius: 2px;
+    border: 1px solid #F1F1F1;
+    padding: 0 20px 0 20px;
+}
+figure {
+    margin: 0 0 1em;
+}
+.ant-btn-primary {
+    border-radius: 4px;
+    background-color: #fa012c;
+    border-color: #fa012c;
+}
+.ant-btn-primary:hover {
+    color: #fff !important;
+    border-color: #fa012c;
+    background: #bf0021 !important;
+}
+.ant-input {
+    box-sizing: border-box;
+    margin: 0;
+    font-variant: tabular-nums;
+    list-style: none;
+    font-feature-settings: "tnum", "tnum";
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    min-width: 0;
+    padding: 12px 11px;
+    color: #272b41;
+    font-size: 14px;
+    line-height: 1.5715;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #e3e6ef;
+    border-radius: 4px;
+    transition: all .3s;
+    height: 40px;
+}
+.ant-input:focus {
+    border-color: #fa012c;
+    box-shadow: 0 0 0 2px rgba(246, 137, 32, .2);
+    border-right-width: 1px;
+    outline: 0;
+}
+.ant-input:hover {
+    border-color: #fa012c;
+    border-right-width: 1px;
+}
+.ant-form-item-control-input {
+    position: relative !important;
+    display: flex !important;
+    align-items: center !important;
+    min-height: 48px !important;
+}
+.ant-modal-header {
+    padding: 16px 24px;
+    color: #272b41;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    border-radius: 4px 4px 0 0;
+}
+.ant-modal-content {
+    position: relative !important;
+    background-color: #fff !important;
+    background-clip: padding-box !important;
+    border: 0 !important;
+    border-radius: 12px !important;
+    box-shadow: 0 3px 6px -4px rgba(0,0,0,.12), 0 6px 16px 0 rgba(0,0,0,.08), 0 9px 28px 8px rgba(0,0,0,.05) !important;
+    pointer-events: auto !important;
+    padding: 0 !important;
+}
+.ant-modal-body {
+    padding: 24px !important;
+    font-size: 14px !important;
+    line-height: 1.5715 !important;
+    word-wrap: break-word !important;
+}
+.ant-modal-footer {
+    padding: 10px 16px !important;
+    text-align: right !important;
+    background: transparent !important;
+    border-top: 1px solid #f0f0f0 !important;
+    border-radius: 0 0 4px 4px !important;
+}
+.wallet-tab-title {
+    font-size: 30px;
+}
+.wallet-tab-value {
+    font-size: 40px;
+}
+.invoice-letter-inner {
+    background: rgb(248, 249, 251);
+    padding: 30px 50px 25px;
+    border-radius: 20px;
+}
+.invoice-author .invoice-author__title {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+.invoice-author p {
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+.invoice-customer {
+    float: right;
+    text-align: right;
+}
+.invoice-customer .invoice-customer__title {
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    color: rgb(39, 43, 65);
+}
+.invoice-customer p {
+    font-size: 15px;
+    margin-bottom: 0px;
+    color: rgb(90, 95, 125);
+}
+.invoice-info {
+    font-weight: 500;
+    line-height: 1.6;
+    text-align: right;
+}
+.summary-total {
+    display: inline-flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    width: 100%;
+}
+.summary-total .summary-total-label {
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(39, 43, 65);
+}
+.summary-total .summary-total-amount {
+    font-size: 18px;
+    font-weight: 600;
+    color: rgb(212, 83, 92);
+}
+.summary-list li {
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+}
+.summary-list li span {
+    font-weight: 500;
+}
+.summary-list li .summary-list-title {
+    color: rgb(90, 95, 125);
+}
+.summary-list li .summary-list-text {
+    color: rgb(39, 43, 65);
+}
