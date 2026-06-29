@@ -19,7 +19,9 @@ const FooterPage = () => {
     >
       <Row>
         <Col md={12} xs={24}>
-          <span className="admin-footer__copyright">2026 © Boichitro</span>
+          <span className="admin-footer__copyright">
+            {new Date().getFullYear()} © Shamagra
+          </span>
         </Col>
         <Col md={12} xs={24}>
           <div className="admin-footer__links">
