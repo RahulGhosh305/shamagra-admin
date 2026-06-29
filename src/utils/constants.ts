@@ -17,13 +17,16 @@ export class Constants {
   static S3_FILE_NAME = (key: string) =>
     `${+new Date()}-${key.replace(/[ ,.]/g, "-")}`;
   static S3_WS_BANNERS = (key?: string) =>
-    `${this.S3_DIR_NAME}/web-setup/banners${key ? `/${key.replace(/[ ,.]/g, "-")}` : ""
+    `${this.S3_DIR_NAME}/web-setup/banners${
+      key ? `/${key.replace(/[ ,.]/g, "-")}` : ""
     }`;
   static S3_WS_CATEGORIES = (key?: string) =>
-    `${this.S3_DIR_NAME}/web-setup/categories${key ? `/${key.replace(/[ ,.]/g, "-")}` : ""
+    `${this.S3_DIR_NAME}/web-setup/categories${
+      key ? `/${key.replace(/[ ,.]/g, "-")}` : ""
     }`;
   static S3_WS_SUB_CATEGORIES = (key?: string) =>
-    `${this.S3_DIR_NAME}/web-setup/sub-categories${key ? `/${key.replace(/[ ,.]/g, "-")}` : ""
+    `${this.S3_DIR_NAME}/web-setup/sub-categories${
+      key ? `/${key.replace(/[ ,.]/g, "-")}` : ""
     }`;
   static S3_BASE_URL = (key: string) =>
     `https://webswift-live.s3.us-east-2.amazonaws.com/${key}`;
@@ -62,9 +65,10 @@ export class Constants {
   static BANNER_PAGES = [{ label: "Landing", value: "landing" }];
 
   static BANNER_POSITIONS = [
-    { label: "Hero Slider", value: "heroSlider" },
-    { label: "App Download ", value: "appDownload" },
-    { label: "Footer Banner", value: "footerBanner" },
+    { label: "Hero Slider", value: "Hero Slider" },
+    { label: "Promotional Banner", value: "Promotional Banner" },
+    { label: "Advertisement Banner", value: "Advertisement Banner" },
+    { label: "Pre Footer Banner", value: "Pre Footer Banner" },
   ];
 
   static ACQUISITION_FIELD_TYPES = [
