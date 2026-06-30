@@ -1,8 +1,9 @@
-import React, {useState} from 'react';
-import {Form} from "antd";
-import {Main} from "@styles/auth-info-style";
+import React, { useState } from 'react';
+import { Form } from "antd";
+import { Main } from "@styles/auth-info-style";
 import AuthorList from "./list";
 import AuthorForm from "./form";
+import AuthorView from "./view";
 import {
     useAuthorsQuery,
     useAuthorQuery,
@@ -11,7 +12,7 @@ import {
     useDeleteAuthorMutation
 } from "@redux/services/web-setup/authors/api";
 
-export type InitialState = {page: number, perPage: number, authorId: string, visible: boolean};
+export type InitialState = { page: number, perPage: number, authorId: string, editVisible: boolean, viewVisible: boolean };
 
 const Authors = () => {
     const [form] = Form.useForm()
@@ -20,35 +21,40 @@ const Authors = () => {
         page: 1,
         perPage: 10,
         authorId: "",
-        visible: false,
+        editVisible: false,
+        viewVisible: false,
     });
 
     const authors = useAuthorsQuery({
         page: state.page,
         perPage: state.perPage,
-    }, {refetchOnMountOrArgChange: true});
+    }, { refetchOnMountOrArgChange: true });
 
-    const author = useAuthorQuery(state.authorId, {skip: !state.authorId, refetchOnMountOrArgChange: true});
+    const author = useAuthorQuery(state.authorId, { skip: !state.authorId, refetchOnMountOrArgChange: true });
     const [addAuthor, addAuthorParams] = useAddAuthorMutation();
     const [updateAuthor, updateAuthorParams] = useUpdateAuthorMutation();
     const [deleteAuthor, deleteAuthorParams] = useDeleteAuthorMutation();
 
     const handleAuthorDelete = async (_id: any) => {
-        deleteAuthor({_id, action: authors.refetch});
+        deleteAuthor({ _id, action: authors.refetch });
     }
 
-    const showModal = async (_id?: string) => {
-        setState({ ...state, visible: true, authorId: _id ?? "" });
+    const showEditModal = async (_id?: string) => {
+        setState({ ...state, editVisible: true, authorId: _id ?? "" });
         form.resetFields();
     };
 
+    const showViewModal = async (_id?: string) => {
+        setState({ ...state, viewVisible: true, authorId: _id ?? "" });
+    };
+
     const handleOk = () => {
-        setState({ ...state, visible: false, authorId: "" });
+        setState({ ...state, editVisible: false, viewVisible: false, authorId: "" });
         authors.refetch();
     };
 
     const handleCancel = () => {
-        setState({ ...state, visible: false, authorId: "" });
+        setState({ ...state, editVisible: false, viewVisible: false, authorId: "" });
     };
 
     return (
@@ -57,7 +63,8 @@ const Authors = () => {
                 state={state}
                 setState={setState}
                 authors={authors.data}
-                showModal={showModal}
+                showEditModal={showEditModal}
+                showViewModal={showViewModal}
                 handleAuthorDelete={handleAuthorDelete}
                 isLoading={authors.isLoading || deleteAuthorParams.isLoading}
             />
@@ -71,6 +78,13 @@ const Authors = () => {
                 handleOk={handleOk}
                 handleCancel={handleCancel}
                 isLoading={addAuthorParams.isLoading || updateAuthorParams.isLoading}
+            />
+
+            <AuthorView
+                state={state}
+                author={author.data}
+                handleCancel={handleCancel}
+                isLoading={author.isLoading}
             />
         </Main>
     )

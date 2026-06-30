@@ -222,20 +222,6 @@ const ProductForm: FC<{
                   </Select>
                 </Form.Item> */}
             <Form.Item
-              name="firstName"
-              rules={[{ required: true }]}
-              label="First Name"
-            >
-              <Input placeholder="firstName" disabled />
-            </Form.Item>
-            <Form.Item
-              name="lastName"
-              rules={[{ required: true }]}
-              label="Last Name"
-            >
-              <Input placeholder="Last Name" disabled />
-            </Form.Item>
-            <Form.Item
               name="orderNumber"
               rules={[{ required: true }]}
               label="Order Number"
@@ -243,32 +229,46 @@ const ProductForm: FC<{
               <Input placeholder="Order Number" disabled />
             </Form.Item>
             <Form.Item
+              name="firstName"
+              rules={[{ required: true }]}
+              label="First Name"
+            >
+              <Input placeholder="firstName" />
+            </Form.Item>
+            <Form.Item
+              name="lastName"
+              rules={[{ required: true }]}
+              label="Last Name"
+            >
+              <Input placeholder="Last Name" />
+            </Form.Item>
+            <Form.Item
               name="apartment"
               rules={[{ required: true }]}
               label="Apartment"
             >
-              <Input placeholder="Apartment" disabled />
+              <Input placeholder="Apartment" />
             </Form.Item>
             <Form.Item
               name="city"
               rules={[{ required: true }]}
               label="City"
             >
-              <Input placeholder="City" disabled />
+              <Input placeholder="City" />
             </Form.Item>
             <Form.Item
               name="thana"
               rules={[{ required: true }]}
               label="Thana"
             >
-              <Input placeholder="Thana" disabled />
+              <Input placeholder="Thana" />
             </Form.Item>
             <Form.Item
               name="district"
               rules={[{ required: true }]}
               label="District"
             >
-              <Input placeholder="district" disabled />
+              <Input placeholder="district" />
             </Form.Item>
             <Form.Item
               name="orderStatus"

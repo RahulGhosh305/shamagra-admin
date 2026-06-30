@@ -13,34 +13,44 @@ const AuthorList: FC<{
     setState: (state: InitialState) => void,
     authors?: AuthorsRes,
     isLoading: boolean,
-    showModal: (_id?: string) => void,
+    showEditModal: (_id?: string) => void,
+    showViewModal: (_id?: string) => void,
     handleAuthorDelete: (_id: string) => void
 }> = ({
     state,
     setState,
     authors,
     isLoading,
-    showModal,
+    showEditModal,
+    showViewModal,
     handleAuthorDelete,
 }) => {
         const columns = [
             { title: 'Name', dataIndex: 'name', key: 'name' },
             { title: 'Is Disabled?', dataIndex: 'isDisabled', key: 'isDisabled', render: (key: string) => key ? "Yes" : "No" },
             { title: 'Position', dataIndex: 'position', key: 'position', render: (key: string) => key ? key : "N/A" },
-            { title: 'Description', dataIndex: 'description', key: 'description', render: (key: string) => key ? key : "N/A" },
             { title: 'Status', dataIndex: 'status', key: 'status', render: (key: string) => formatCamelCaseToTitleCase(key) },
             {
                 title: <div className="text-right">Action</div>,
                 dataIndex: '_id',
                 key: '_id',
                 render: (key: any) => <div className="text-right">
+                    {Scope.checkScopes(['ws_authors_index']) && (
+                        <AntButton
+                            size="small"
+                            type="ghost"
+                            className="minimum-mr color-info border-info"
+                            icon={<FeatherIcon icon="eye" size={14} />}
+                            onClick={() => showViewModal(key)}
+                        />
+                    )}
                     {Scope.checkScopes(['ws_authors_update']) && (
                         <AntButton
                             size="small"
                             type="ghost"
                             className="minimum-mr color-info border-info"
                             icon={<FeatherIcon icon="edit" size={14} />}
-                            onClick={() => showModal(key)}
+                            onClick={() => showEditModal(key)}
                         />
                     )}
                     {Scope.checkScopes(['ws_authors_delete']) && (
@@ -59,7 +69,7 @@ const AuthorList: FC<{
         const headerButtons = [
             <div key="1" className="page-header-action">
                 {Scope.checkScopes(['ws_authors_create']) && (
-                    <AntButton type="primary" onClick={() => showModal()}>
+                    <AntButton type="primary" onClick={() => showEditModal()}>
                         <FeatherIcon icon="plus" size={14} />
                         &nbsp;Add New
                     </AntButton>

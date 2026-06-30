@@ -3,6 +3,7 @@ export type AuthorsRes = {
         data: {
             _id: string,
             name: string,
+            photo?: string,
             position: number,
             isDisabled: boolean,
             description: string,
@@ -23,6 +24,7 @@ export type AuthorsReq = {
 export type AddAuthorReq = {
     data: {
         name: string,
+        photo?: string,
         position: number,
         isDisabled: boolean,
         description: string,
@@ -35,6 +37,7 @@ export type AuthorRes = {
     data: {
         _id: string,
         name: string,
+        photo?: string,
         position: number,
         isDisabled: boolean,
         description: string,
@@ -48,7 +51,6 @@ export type UpdateAuthorReq = {
         _id: string,
         name: string,
         photo: string,
-        color: string,
         position: number,
         isDisabled: boolean,
         description: string,

@@ -35,7 +35,7 @@ const Dashboard = () => {
               <Col xs={24} sm={12} xl={6}>
                 <StatCard
                   title="Total Sales"
-                  value={`৳${stats?.totalRevenue?.toLocaleString() || 0}`}
+                  value={`৳ ${stats?.totalRevenue?.toLocaleString() || 0}`}
                   color="sky"
                   icon={<DollarOutlined />}
                   trend={<LineChartOutlined height={24} width={24} />}
@@ -75,7 +75,7 @@ const Dashboard = () => {
               <Col xs={24} sm={12} xl={6}>
                 <StatCard
                   title="Today Sales"
-                  value={`৳${stats?.todayRevenue?.toLocaleString() || 0}`}
+                  value={`৳ ${stats?.todayRevenue?.toLocaleString() || 0}`}
                   color="sky"
                   icon={<DollarOutlined />}
                   trend={<LineChartOutlined height={24} width={24} />}

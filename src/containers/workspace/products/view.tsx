@@ -50,6 +50,7 @@ const ProductView: FC<{
                                     </Col>
                                     <Col xs={24} md={18}>
                                         <Title level={3} style={{ marginTop: 0, marginBottom: 8 }}>{data.product?.title}</Title>
+                                        <Text style={{ fontSize: '16px', display: 'block', marginBottom: '16px' }}>লেখক: {data.product?.author || 'N/A'}</Text>
                                         {data.product?.subTitle && <Text type="secondary" style={{ fontSize: '16px', display: 'block', marginBottom: '16px' }}>{data.product.subTitle}</Text>}
 
                                         <div style={{ marginBottom: '24px', textTransform: 'capitalize' }}>
@@ -61,7 +62,7 @@ const ProductView: FC<{
 
                                         <Descriptions column={2} bordered size="small">
                                             <Descriptions.Item label="Product Code">{data.product?.productCode}</Descriptions.Item>
-                                            <Descriptions.Item label="Author">{data.product?.author}</Descriptions.Item>
+                                            <Descriptions.Item label="Purchase Price">{data.pricing?.purchasePrice}</Descriptions.Item>
                                             <Descriptions.Item label="Original Price">{(data.pricing?.originalPrice) ? `$${data.pricing.originalPrice}` : 'N/A'}</Descriptions.Item>
                                             <Descriptions.Item label="Discount Price">
                                                 <Text type="success" strong>{(data.pricing?.discountPrice) ? `$${data.pricing.discountPrice}` : 'N/A'}</Text>

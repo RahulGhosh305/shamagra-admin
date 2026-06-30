@@ -140,11 +140,11 @@ const SiderPage: FC<{
           key: "/web-setup/categories",
           isPermitted: Scope.checkScopes(["ws_categories_index"]),
         }),
-        getItem({
-          label: <Link href={"/web-setup/sub-categories"}>Sub Categories</Link>,
-          key: "/web-setup/sub-categories",
-          isPermitted: Scope.checkScopes(["ws_sub_categories_index"]),
-        }),
+        // getItem({
+        //   label: <Link href={"/web-setup/sub-categories"}>Sub Categories</Link>,
+        //   key: "/web-setup/sub-categories",
+        //   isPermitted: Scope.checkScopes(["ws_sub_categories_index"]),
+        // }),
       ],
     }),
     getItem({

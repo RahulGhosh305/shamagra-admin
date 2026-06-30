@@ -9,8 +9,9 @@ export const StyledCard = styled(Card)`
   border: none;
 
   .ant-card-body {
-    padding: 10px;
+    padding: 12px;
     height: 100%;
+    max-height: 120px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -19,32 +20,38 @@ export const StyledCard = styled(Card)`
 
 export const DecorativeCircle = styled.div<{ $circleColor: string, $ringColor: string }>`
   position: absolute;
-  top: -30px;
-  right: -30px;
-  height: 110px;
-  width: 110px;
+  top: -24px;
+  right: -24px;
+  height: 90px;
+  width: 90px;
   border-radius: 50%;
   background-color: ${({ $circleColor }) => $circleColor};
-  box-shadow: 0 0 0 20px ${({ $ringColor }) => $ringColor};
+  box-shadow: 0 0 0 15px ${({ $ringColor }) => $ringColor};
   opacity: 0.5;
 `;
 
 export const IconContainer = styled.div<{ $borderColor: string, children?: ReactNode }>`
   position: relative;
   z-index: 10;
-  width: 40px;
-  height: 40px;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  min-height: 36px;
+  flex-shrink: 0;
   border-radius: 50%;
   border: 1px dashed ${({ $borderColor }) => $borderColor};
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 24px;
+  margin-bottom: 8px;
 `;
 
 export const InnerIcon = styled.div<{ $bg: string, children?: ReactNode }>`
-  width: 28px;
-  height: 28px;
+  width: 26px;
+  height: 26px;
+  min-width: 26px;
+  min-height: 26px;
+  flex-shrink: 0;
   border-radius: 50%;
   background-color: ${({ $bg }) => $bg};
   display: flex;
@@ -60,9 +67,9 @@ export const ContentWrapper = styled.div`
 `;
 
 export const Title = styled.p<{ $color: string, children?: ReactNode }>`
-  margin-bottom: 8px;
+  margin-bottom: 2px;
   color: ${({ $color }) => $color};
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
 `;
 
@@ -74,7 +81,7 @@ export const ValueRow = styled.div`
 
 export const Value = styled.h2`
   margin: 0;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 700;
   color: #1f2937;
 `;

@@ -66,6 +66,7 @@ const ProductForm: FC<{
           descriptionShort: product?.data?.description?.short ?? "",
           authorDescription: product?.data?.authorDescription ?? "",
           descriptionLong: product?.data?.description?.long ?? "",
+          purchasePrice: product?.data?.pricing?.purchasePrice ?? "",
           originalPrice: product?.data?.pricing?.originalPrice ?? "",
           discountPrice: product?.data?.pricing?.discountPrice ?? "",
           discountPercentage: product?.data?.pricing?.discountPercentage ?? "",
@@ -393,6 +394,13 @@ const ProductForm: FC<{
                   label="Author"
                 >
                   <Input placeholder="Author" />
+                </Form.Item>
+                <Form.Item
+                  name="purchasePrice"
+                  rules={[{ required: true }]}
+                  label="Purchase Price"
+                >
+                  <Input placeholder="Purchase Price" type="number" />
                 </Form.Item>
                 <Form.Item
                   name="originalPrice"

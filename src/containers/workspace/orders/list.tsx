@@ -28,9 +28,9 @@ const ProductList: FC<{
             { title: 'Order Number', dataIndex: 'orderNumber', render: (key: any) => key ?? "" },
             { title: 'User Name', dataIndex: 'shippingAddress', render: (key: any) => `${key?.firstName ?? ''} ${key?.lastName ?? ''}` },
             { title: 'Phone', dataIndex: 'shippingAddress', render: (key: any) => key?.phone ?? "" },
-            { title: 'User Address', dataIndex: 'shippingAddress', render: (key: any) => `${key?.apartment ?? ""}, ${key?.city ?? ""}, ${key?.district ?? ""} ` },
+            // { title: 'User Address', dataIndex: 'shippingAddress', render: (key: any) => `${key?.apartment ?? ""}, ${key?.city ?? ""}, ${key?.district ?? ""} ` },
             { title: 'Price', dataIndex: 'pricing', key: 'pricing', render: (key: any) => key?.totalAmount ?? "" },
-            { title: 'Payment Method', dataIndex: 'payment', render: (key: any) => key?.method ?? "" },
+            { title: 'Payment', dataIndex: 'payment', render: (key: any) => key?.method ?? "" },
             { title: 'Order Items', dataIndex: 'items', render: (key: any) => key?.map((item: any) => item.productTitle + " | ") },
             { title: 'Order Date', dataIndex: 'createdAt', render: (key: any) => shortDate(key) ?? "" },
             {

@@ -41,6 +41,7 @@ export type ProductRes = {
             totalReviews: string;
         },
         pricing: {
+            purchasePrice: number;
             originalPrice: number;
             discountPrice: number;
             discountPercentage: number;
