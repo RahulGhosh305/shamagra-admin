@@ -1,13 +1,13 @@
-import {createApi} from "@reduxjs/toolkit/dist/query/react";
-import {baseQuery, validateStatus} from "@utils/auth";
-import {Constants} from "@utils/constants";
+import { createApi } from "@reduxjs/toolkit/dist/query/react";
+import { baseQuery, validateStatus } from "@utils/auth";
+import { Constants } from "@utils/constants";
 import {
     AddUserReq,
     UserRes,
     UsersReq,
     UsersRes,
 } from "@redux/services/clients/users/type";
-import {SimpleRes} from "@redux/services/utilities/type";
+import { SimpleRes } from "@redux/services/utilities/type";
 
 export const clientsUsersApi = createApi({
     reducerPath: "clientsUsersApi",
@@ -32,11 +32,38 @@ export const clientsUsersApi = createApi({
                 })
             })
         }),
+        updateUser: builder.mutation<SimpleRes, any>({
+            query: (args) => ({
+                url: `${Constants.CLIENTS}/users/${args.data._id}`,
+                method: 'PUT',
+                body: args.data,
+                validateStatus: (response, result) => validateStatus({
+                    status: response.status,
+                    message: result.message,
+                    action: args.action,
+                    alert: true
+                })
+            })
+        }),
+        deleteUser: builder.mutation<SimpleRes, any>({
+            query: (args) => ({
+                url: `${Constants.CLIENTS}/users/${args.data._id}`,
+                method: 'DELETE',
+                validateStatus: (response, result) => validateStatus({
+                    status: response.status,
+                    message: result.message,
+                    action: args.action,
+                    alert: true
+                })
+            })
+        }),
     }),
 });
 
 export const {
     useUsersQuery,
     useUserQuery,
-    useAddUserMutation
+    useAddUserMutation,
+    useUpdateUserMutation,
+    useDeleteUserMutation
 } = clientsUsersApi;

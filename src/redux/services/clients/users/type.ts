@@ -18,17 +18,11 @@ export type UsersRes = {
 
 export type UserRes = {
     data: {
+        _id: string;
         firstName: string;
         lastName: string;
         email: string;
-        phone: {
-            phone: string,
-            country: {
-                _id: string
-                name: string
-                code: string
-            }
-        };
+        phone: string;
         otp: {
             otp: string;
             verified: boolean;
