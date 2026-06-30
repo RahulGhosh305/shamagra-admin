@@ -74,7 +74,7 @@ const ProductForm: FC<{
           // originCountry: product?.data?.specifications?.originCountry ?? "",
           // format: product?.data?.specifications?.format ?? "",
           // totalPages: product?.data?.specifications?.totalPages ?? "",
-          // publishDate: product?.data?.specifications?.publishDate ?? "",
+          // publishYear: product?.data?.specifications?.publishYear ?? "",
           // language: product?.data?.specifications?.language ?? "",
           orderStatus: order?.data?.orderStatus ?? "",
         });

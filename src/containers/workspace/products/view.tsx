@@ -100,7 +100,7 @@ const ProductView: FC<{
                                 <Descriptions column={{ xs: 1, sm: 1, md: 2, lg: 2, xl: 3, xxl: 3 }} bordered size="small" style={{ overflowX: 'auto' }}>
                                     <Descriptions.Item label="Format">{data.specifications?.format || 'N/A'}</Descriptions.Item>
                                     <Descriptions.Item label="Total Pages">{data.specifications?.totalPages || 'N/A'}</Descriptions.Item>
-                                    <Descriptions.Item label="Publish Date">{data.specifications?.publishDate || 'N/A'}</Descriptions.Item>
+                                    <Descriptions.Item label="Publish Date">{data.specifications?.publishYear || 'N/A'}</Descriptions.Item>
                                     <Descriptions.Item label="Language">{data.specifications?.language || 'N/A'}</Descriptions.Item>
                                     <Descriptions.Item label="Origin Country">{data.specifications?.originCountry || 'N/A'}</Descriptions.Item>
                                     <Descriptions.Item label="Dimensions">{data.specifications?.dimensions || 'N/A'}</Descriptions.Item>

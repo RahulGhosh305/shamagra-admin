@@ -76,7 +76,7 @@ const ProductForm: FC<{
           originCountry: product?.data?.specifications?.originCountry ?? "",
           format: product?.data?.specifications?.format ?? "",
           totalPages: product?.data?.specifications?.totalPages ?? "",
-          publishDate: product?.data?.specifications?.publishDate ?? "",
+          publishYear: product?.data?.specifications?.publishYear ?? "",
           language: product?.data?.specifications?.language ?? "",
           status: product?.data?.status ?? "",
         });
@@ -383,7 +383,7 @@ const ProductForm: FC<{
                 </Form.Item>
                 <Form.Item
                   name="subTitle"
-                  rules={[{ required: true }]}
+                  rules={[{ required: false }]}
                   label="Sub Title"
                 >
                   <Input placeholder="Sub Title" />
@@ -441,11 +441,11 @@ const ProductForm: FC<{
                   <Input placeholder="Total Pages" />
                 </Form.Item>
                 <Form.Item
-                  name="publishDate"
-                  rules={[{ required: true }]}
-                  label="Publish Date"
+                  name="publishYear"
+                  rules={[{ required: false }]}
+                  label="Publish Year"
                 >
-                  <Input placeholder="Publish Date" />
+                  <Input placeholder="Publish Year" />
                 </Form.Item>
                 <Form.Item
                   name="language"
@@ -454,19 +454,23 @@ const ProductForm: FC<{
                 >
                   <Input placeholder="Language" />
                 </Form.Item>
-                <Form.Item name="sku" rules={[{ required: true }]} label="SKU">
+                <Form.Item
+                  name="sku"
+                  rules={[{ required: false }]}
+                  label="SKU"
+                >
                   <Input placeholder="SKU" />
                 </Form.Item>
                 <Form.Item
                   name="dimensions"
-                  rules={[{ required: true }]}
+                  rules={[{ required: false }]}
                   label="Dimensions"
                 >
                   <Input placeholder="Dimensions" />
                 </Form.Item>
                 <Form.Item
                   name="weight"
-                  rules={[{ required: true }]}
+                  rules={[{ required: false }]}
                   label="Weight"
                 >
                   <Input placeholder="Weight" />
@@ -483,7 +487,7 @@ const ProductForm: FC<{
               <Col md={8}>
                 <Form.Item
                   name="descriptionShort"
-                  rules={[{ required: true }]}
+                  rules={[{ required: false }]}
                   label="Description Short"
                 >
                   <Input.TextArea rows={5} placeholder="Description Short" />
